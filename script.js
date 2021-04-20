@@ -3,7 +3,7 @@ const hoursEl = document.getElementById("hours");
 const minsEl = document.getElementById("mins");
 const secondsEl = document.getElementById("seconds");
 
-const airBnB = "11 Mar 2021";
+const airBnB = "14 May 2021";
 
 function countdown() {
   const sydneyDate = new Date(airBnB);
