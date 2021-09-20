@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { styled } from "@mui/material/styles";
 import {
   Box,
@@ -10,6 +11,7 @@ import {
   Typography,
   Divider,
 } from "@mui/material";
+import { trips } from "../data/trips";
 
 import CountdownTimer from "./CountdownTimer";
 
@@ -20,17 +22,17 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-const Trip = ({ trip }) => {
+const Trip = () => {
   return (
     <Box sx={{ flexGrow: 1, backgroundColor: "primary.main", p: 2 }}>
       <Typography align="center" variant="h3" color="main.primary">
-        Our past trips
+        Trust Is Everything {">:)"}
       </Typography>
       <Divider color="main.primary" sx={{ m: 3 }} />
       <CountdownTimer />
       <Divider color="main.primary" sx={{ m: 3 }} />
       <Typography align="center" variant="h3" color="main.primary">
-        Our past trips
+        Best Memories
       </Typography>
       <Grid
         container
@@ -39,21 +41,16 @@ const Trip = ({ trip }) => {
         rowSpacing={2}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       >
-        {months.map((month, index) => (
+        {trips.map((trip, index) => (
           <Grid item key={index} xs={12} sm={6} md={4} lg={4} xl={4}>
             <Item>
               <ImageList>
-                <ImageListItem key="Subheader" cols={2}>
-                  <ListSubheader component="div">{month}</ListSubheader>
+                <ImageListItem cols={2}>
+                  <ListSubheader component="div">{trip.city}</ListSubheader>
                 </ImageListItem>
-                {itemData.map((item) => (
-                  <ImageListItem key={item.img}>
-                    <img
-                      src={`${item.img}?w=248&fit=crop&auto=format`}
-                      srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                      alt={item.title}
-                      loading="lazy"
-                    />
+                {trip.images.map((image, index) => (
+                  <ImageListItem key={index}>
+                    <Image src={image.img} alt={image.title} />
                   </ImageListItem>
                 ))}
               </ImageList>
@@ -66,32 +63,3 @@ const Trip = ({ trip }) => {
 };
 
 export default Trip;
-
-const months = ["January", "February", "March", "April", "May", "June", "July"];
-
-const itemData = [
-  {
-    img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
-    title: "Breakfast",
-    author: "@bkristastucchio",
-    rows: 2,
-    cols: 2,
-    featured: true,
-  },
-  {
-    img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
-    title: "Burger",
-    author: "@rollelflex_graphy726",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1522770179533-24471fcdba45",
-    title: "Camera",
-    author: "@helloimnik",
-  },
-  {
-    img: "https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c",
-    title: "Coffee",
-    author: "@nolanissac",
-    cols: 2,
-  },
-];
