@@ -34,14 +34,13 @@ const Trip = ({ trip }) => {
       </Typography>
       <Grid
         container
-        spacing={{ xs: 2, md: 3 }}
+        spacing={2}
         sx={{ p: 1 }}
-        columns={{ xs: 4, sm: 8, md: 12, lg: 16 }}
         rowSpacing={2}
         columnSpacing={{ xs: 1, sm: 2, md: 3 }}
       >
         {months.map((month, index) => (
-          <Grid item key={index} xs={2} md={4} lg={4}>
+          <Grid item key={index} xs={12} sm={6} md={4} lg={4} xl={4}>
             <Item>
               <ImageList>
                 <ImageListItem key="Subheader" cols={2}>
