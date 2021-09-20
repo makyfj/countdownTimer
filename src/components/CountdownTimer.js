@@ -6,7 +6,7 @@ const daySeconds = 86400;
 
 const timerProps = {
   isPlaying: true,
-  size: 120,
+  size: 90,
   strokeWidth: 6,
 };
 
