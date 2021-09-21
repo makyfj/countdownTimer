@@ -1,8 +1,9 @@
 import avatar from "../../public/images/avatar.jpg";
+import Saratoga1 from "../../public/images/Saratoga-1.jpeg"
 
 export const trips = [
   {
-    city: "Beacon, NY",
+    city: "Saratoga Springs, NY",
 
     images: [
       {
