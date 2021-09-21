@@ -47,7 +47,9 @@ const Trip = () => {
             <Item>
               <ImageList>
                 <ImageListItem cols={2}>
-                  <ListSubheader component="div">{trip.city}</ListSubheader>
+                  <ListSubheader component="div" sx={{ mb: 1 }}>
+                    {trip.city}
+                  </ListSubheader>
                 </ImageListItem>
                 {trip.images.map((image, index) => (
                   <ImageListItem key={index}>
