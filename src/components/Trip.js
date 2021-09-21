@@ -25,14 +25,15 @@ const Item = styled(Paper)(({ theme }) => ({
 const Trip = () => {
   return (
     <Box sx={{ flexGrow: 1, backgroundColor: "primary.main", p: 2 }}>
-      <Typography align="center" variant="h3" color="main.primary">
-        Trust Is Everything {">:)"}
+      <Typography align="center" variant="h3">
+        Trust Is Everything {"<3"}
       </Typography>
       <Divider color="main.primary" sx={{ m: 3 }} />
+      <Typography></Typography>
       <CountdownTimer />
       <Divider color="main.primary" sx={{ m: 3 }} />
-      <Typography align="center" variant="h3" color="main.primary">
-        Best Memories
+      <Typography align="center" variant="h3">
+        Trips
       </Typography>
       <Grid
         container
