@@ -26,7 +26,7 @@ const getTimeDays = (time) => (time / daySeconds) | 0;
 
 const CountdownTimer = () => {
   const startTime = Date.now() / 1000;
-  const endTime = startTime + 1470000;
+  const endTime = startTime + 1315413;
 
   const remainingTime = endTime - startTime;
   const days = Math.ceil(remainingTime / daySeconds);
